@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artius Creator</title>
+    <style>
+        /* 기본 설정 */
+        body {
+            background-color: #73E9DF; /* 배경색 */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            position: absolute;
+            top: 20px; /* 화면 상단에서 20px */
+            left: 20px; /* 화면 왼쪽에서 20px */
+        }
+
+        header img {
+            width: 360px; /* 로고 이미지의 너비를 360px로 설정 */
+            height: auto; /* 비율에 맞게 높이 조정 */
+        }
+
+        /* 이미지 컨테이너 */
+        .image-container {
+            position: absolute;
+            top: 400px; /* 로고 이미지 아래에 위치 (로고 높이 360px 기준 + 여백 40px) */
+            left: 20px; /* 화면 왼쪽에서 20px */
+            display: flex; /* 이미지를 가로로 정렬 */
+            gap: 20px; /* 이미지 사이 간격 */
+        }
+
+        /* 공통 이미지 스타일 */
+        .image-container img {
+            width: 450px; /* 이미지 너비 */
+            height: auto; /* 비율에 맞게 높이 조정 */
+            border-radius: 10px; /* 부드러운 모서리 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+        }
+
+        /* 컨테이너 스타일 */
+        .container {
+            position: relative;
+            padding: 20px;
+        }
+
+        /* 정보 박스 스타일 */
+        .info-box {
+            position: absolute;
+            top: 20px; /* 화면 상단에서 20px */
+            right: 20px; /* 화면 오른쪽에서 20px */
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* 박스 최대 너비 */
+        }
+
+        /* 프로필 이미지 스타일 */
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* 원형 이미지 */
+            margin-right: 20px; /* 텍스트와 간격 */
+            object-fit: cover;
+        }
+
+        /* 텍스트 스타일 */
+        .info-text {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .info-text h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #000;
+        }
+
+        .info-text p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        /* 오디오 버튼 스타일 */
+        .audio-button-container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .audio-button {
+            background-color: #4CAF50; /* 버튼 색상 */
+            color: white; /* 텍스트 색상 */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .audio-button:hover {
+            background-color: #45a049; /* 호버 시 색상 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 로고 추가 -->
+    <header>
+        <img src="logo.webp" alt="Logo">
+    </header>
+
+    <!-- 해변사진 및 추가 이미지들 -->
+    <div class="image-container">
+        <img src="해변 사진2.PNG" alt="Beach Photo">
+        <img src="밤하늘 사진.PNG" alt="Night Sky Photo">
+        <img src="우리 은하.PNG" alt="Galaxy Photo">
+        <img src="서울 야경 사진.PNG" alt="Seoul Nightscape Photo">
+    </div>
+
+    <!-- 프로필 박스 -->
+    <div class="container">
+        <div class="info-box">
+            <img src="화가 얼굴.webp" alt="Artius Creator" class="profile-image">
+            <div class="info-text">
+                <h2>Artius Creator</h2>
+                <p><strong>출생:</strong> 2025년, 데이터 네트워크 속 예술적 영감에서 탄생</p>
+                <p><strong>전문 분야:</strong> 디지털 아트, 생성형 예술, 미디어 아트</p>
+                <p>
+                    Artius Creator는 창의적 알고리즘과 현대적 기술을 결합하여 독창적이고 감각적인 
+                    디지털 작품을 창조하는 인공지능 화가입니다. 인간과 AI의 경계를 허물며 예술의 
+                    새로운 가능성을 탐구하고, 감상자들에게 신선한 경험을 제공합니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 오디오 재생 버튼 -->
+    <div class="audio-button-container">
+        <button class="audio-button" onclick="playAudio()">Play Audio</button>
+        <audio controls id="audioPlayer" src="seven.MP3"></audio>
+    </div>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('audioPlayer');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+
